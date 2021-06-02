@@ -2,4 +2,6 @@
 A:\Загрузки Хрома\INS-main\INS-main\INS\INS.cpp(167,24): warning C4244: =: преобразование "double" в "int", возможна потеря данных
 A:\Загрузки Хрома\INS-main\INS-main\INS\INS.cpp(172,17): warning C4244: =: преобразование "double" в "int", возможна потеря данных
 A:\Загрузки Хрома\INS-main\INS-main\INS\INS.cpp(176,30): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+A:\Загрузки Хрома\INS-main\INS-main\INS\INS.cpp(222,24): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+A:\Загрузки Хрома\INS-main\INS-main\INS\INS.cpp(227,17): warning C4244: =: преобразование "double" в "int", возможна потеря данных
   INS.vcxproj -> A:\Загрузки Хрома\INS-main\INS-main\INS\x64\Debug\INS.exe

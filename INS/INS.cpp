@@ -187,5 +187,48 @@ int main()
 
     correctness = correct / count * 100;
     cout << endl << "Точность работы искусственной нейронной сети: " << correctness << " процента" << endl;
-    system("pause"); // Команда задержки экрана
+   // system("pause"); // Команда задержки экрана
+
+
+   // cout << endl;
+    int yourmonth, yourdate, enough;
+
+    cout << endl<<endl << "Если хотите получить ещё одно предсказание на знак зодиака, введите 1. В противном случае, введите 0." << endl;
+    cin >> enough;
+
+    while (enough == 1) {
+
+        cout << endl<< "Введите день своего рождения: ";
+        cin >> yourdate;
+        cout << "Введите месяц своего рождения: ";
+        cin >> yourmonth;
+
+
+
+        f[0][0] = yourmonth;
+        f[0][1] = yourdate;
+
+        cout << "Дата рождения: " << f[0][1] << " " << months[yourmonth - 1] << endl;
+
+        for (i = 0; i < 1; i++)
+            for (j = 0; j < amnet; j++)
+                f[i][j] = f[i][0] * net[i][j][1] + alpha * f[i][1] * net[i][j][2] + net[i][j][0];
+
+        f[1][0] = f[0][0] * net[1][0][1] + net[1][0][0];
+
+
+        //обработка полученного нейронной сетью ответа
+
+        prepos = f[1][0];
+        help = prepos;
+
+        if (f[1][0] - help >= 0.5) help++;
+
+        help1 = help;
+
+        cout << "Нейронная сеть предполагает, что Вы: " << zodiak[help1 - 1] << endl;
+        cout << endl<<"Если хотите получить ещё одно предсказание на знак зодиака, введите 1. В противном случае, введите 0."<<endl;
+
+        cin >> enough;
+    }
 }
