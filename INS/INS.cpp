@@ -187,4 +187,5 @@ int main()
 
     correctness = correct / count * 100;
     cout << endl << "Точность работы искусственной нейронной сети: " << correctness << " процента" << endl;
+    system("pause"); // Команда задержки экрана
 }
